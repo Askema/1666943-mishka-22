@@ -8,15 +8,17 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="top-menu"></div>
-
     <nav class="nav">
       <button class="nav__toggle">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="nav__wrapper">
         <ul class="nav__list">
-          <li class="nav__item"><a href="" class="nav__link page-header__logo"><img src="" alt="Магазин «Мишка»"></a>
+          <li class="nav__item"><a href="" class="nav__link page-header__logo page-header__logo--mobile"><img src="" alt="Магазин «Мишка»"></a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__link page-header__logo page-header__logo--tablet"><img src="" alt="Магазин «Мишка»"></a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__link page-header__logo page-header__logo--desktop"><img src="" alt="Магазин «Мишка»"></a>
           </li>
           <li class="nav__item"><a href="" class="nav__link">Каталог товаров</a></li>
           <li class="nav__item"><a href="" class="nav__link">Вязание на заказ</a></li>
@@ -34,10 +36,10 @@
     <section class="category">
       <h2 class="category__title">Милые штуки ручной работы для дома</h2>
       <div class="category__wrapper">
-        <a class="category__link">
+        <a href="" class="category__link">
           <div class="category__item">Предметы интерьера</div>
         </a>
-        <a class="category__link">
+        <a href="" class="category__link">
           <div class="category__item">Детские игрушки</div>
         </a>
       </div>
@@ -59,9 +61,9 @@
           <dd class="product__description-definition">15 см</dd>
         </dl>
       </div>
-      <div class="product__img-wrapper"></div>
+      <div class="product__img-wrapper"><img src="" alt="Фотография вязаных корзинок"></div>
       <div class="product__buy">
-        <span class="product__price"></span>
+        <span class="product__price">Цена: 900 руб.</span>
         <a href="" class="product__button">Заказать</a>
       </div>
     </article>
@@ -86,7 +88,7 @@
         <div class="reviews__author-info">
           <cite>
             <span class="reviews__author-name">Анастасия Красильникова</span>
-            <a class="reviews__author-nickname">@misssssiskras</a>
+            <a href="" class="reviews__author-nickname">@misssssiskras</a>
           </cite>
         </div>
         <div class="reviews__silder-buttons">
@@ -102,18 +104,22 @@
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <div class="contacts__info">
-        <p class="contacts__email">e-mail: <a href="mailto:info@mimimishkashop.ru"
-            class="contacts__link">info@mimimishkashop.ru</a></p>
-        <div class="contacts__address">адрес: </div>
-        <div class="contacts__address-text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</div>
+        <dl class="contacts__description-list">
+          <dt class="contacts__description-term">e-mail: </dt>
+          <dd class="contacts__description-definition"><a
+              href="mailto:info@mimimishkashop.ru" class="contacts__description-definition--link">info@mimimishkashop.ru</a></dd>
+          <dt class="contacts__description-term">адрес: </dt>
+          <dd class="contacts__description-definition">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+          </dd>
+        </dl>
       </div>
-      <div class="contacts__button-wrapper"><a class="contacts__button"></a></div>
+      <div class="contacts__button-wrapper"><a href="" class="contacts__button"></a></div>
       <div class="contacts__map"></div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="logo-block">
-      <a class="logo-block__link"></a>
+      <a href="" class="logo-block__link"></a>
     </div>
     <div class="social">
       <ul class="social__list">
@@ -122,8 +128,7 @@
         <li class="social__item"><a href="" class="social__link"><span class="visually-hidden">twitter</span></a></li>
       </ul>
     </div>
-    <div class="copyright">
-      <a class="copyright__link">Разработано:<span class="visually-hidden">HTML academy</span></a>
+    <div class="copyright">                                                                                                                 IYKK\65555555555555555555555555555555555555555555[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[IIIIIIIIIIIIIIII<a href="" class="copyright__link">Разработано:<span class="visually-hidden"><img src="" alt="Логотип HTML 88888888IOacademy">HTML academy</span></a>
     </div>
   </footer>
   <section class="modal">
@@ -131,11 +136,11 @@
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__choose-size">Выберите размер</p>
       <fieldset class="modal__fieldset-size">
-        <input class="modal__input" type="radio" name="size" id="size-s" checked>
+        <input class="modal__input" type="radio" name="size" id="size-s" value="size-s" checked>
         <label class="modal__input-label" for="size-s">S</label>
-        <input class="modal__input" type="radio" name="size" id="size-m">
+        <input class="modal__input" type="radio" name="size" id="size-m" value="size-m">
         <label class="modal__input-label" for="size-m">M</label>
-        <input class="modal__input" type="radio" name="size" id="size-l">
+        <input class="modal__input" type="radio" name="size" id="size-l" value="size-l">
         <label class="modal__input-label" for="size-l">L</label>
       </fieldset>
       <input class="modal-button" type="submit" value="Добавить">
