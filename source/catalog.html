@@ -30,9 +30,7 @@
   </header>
   <main class="page-main">
     <section class="catalog">
-      <div class="catalog__title-wrapper">
-        <h1 class="catalog__title">Каталог товаров</h1>
-      </div>
+      <h1 class="title">Каталог товаров</h1>
       <article class="product">
         <a href="#" class="product__img-link">
           <img src="" alt="Милый зайчик">
@@ -83,11 +81,14 @@
       <div class="making__title-wrapper">
         <h2 class="making__title">Процесс производства</h2>
       </div>
-      <div class="making__video-wrapper"><img src="" alt="Процесс создания наших товаров"></div>
+      <div class="making__video-wrapper">
+        <img src="" alt="Процесс создания наших товаров">
+        <div class="making__play-button"></div>
+      </div>
       <div class="making__info">
         <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши
           товары.</p>
-        <a class="making__button">Сделать заказ</a>
+        <a href="form.html" class="making__button">Сделать заказ</a>
       </div>
     </section>
   </main>
@@ -107,6 +108,21 @@
             alt="Логотип HTML academy">HTML academy</span></a>
     </div>
   </footer>
+  <section class="modal">
+    <form action="https://echo.htmlacademy.ru/" class="modal__form">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__choose-size">Выберите размер</p>
+      <fieldset class="modal__fieldset-size">
+        <input class="modal__input" type="radio" name="size" id="size-s" value="size-s" checked>
+        <label class="modal__input-label" for="size-s">S</label>
+        <input class="modal__input" type="radio" name="size" id="size-m" value="size-m">
+        <label class="modal__input-label" for="size-m">M</label>
+        <input class="modal__input" type="radio" name="size" id="size-l" value="size-l">
+        <label class="modal__input-label" for="size-l">L</label>
+      </fieldset>
+      <button class="modal-button" type="submit">Добавить</button>
+    </form>
+  </section>
 
 </body>
 
