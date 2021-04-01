@@ -4,8 +4,10 @@
 }
 
 .modal__title {
-  .text(25px; 30px; @color-title; bold);
+  .text(25px, 30px, @color-title, bold);
+  margin-top: 31px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .modal__choose-size {
@@ -34,14 +36,16 @@
 }
 
 .modal__input-label {
+  .text(17px; 16px; @color-text; bold);
   border: 2px solid rgba(@color-text, 0.1);
   padding: 18px 29px;
   display: block;
   margin-bottom: 30px;
 }
 
-.modal-button {
+.modal__button {
   .text(17px; 16px; @color-bg; bold);
+  font-family: "Open Sans", "Arial", sans-serif;
   display: block;
   background-color: @color-main;
   text-transform: uppercase;
