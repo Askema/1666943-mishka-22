@@ -1,0 +1,31 @@
+.page-footer__wrapper {
+  .container();
+  padding: 0 30px 0 30px;
+  background-color: @color-main2;
+}
+
+.logo-block--tablet {
+  display: none;
+}
+
+.social {
+  position: relative;
+  padding: 35px 0 35px 0;
+
+  &::after {
+    .pseudo();
+    width: 260px;
+    height: 1px;
+    background-color: @color-border-footer;
+    bottom: 0;
+  }
+}
+
+.copyright {
+  padding: 35px 0 35px 0;
+  text-align: center;
+}
+
+.copyright__link {
+  .text(19px, 18px, @color-title, bold);
+}
