@@ -1,0 +1,27 @@
+.about__wrapper {
+  .container();
+  padding: 0 30px 0 30px;
+  background-color: @color-bg;
+}
+
+.about__title {
+  .text(25px, 30px, @color-title, bold);
+  margin-top: 31px;
+}
+
+.about__list {
+  .text(17px; 20px; @color-title; bold);
+  .ul();
+}
+
+.about__item {
+  margin-top: 83px;
+  position: relative;
+
+  &::before {
+    .pseudo();
+    top: -45px;
+    width: 35px;
+    height: 35px;
+  }
+}
