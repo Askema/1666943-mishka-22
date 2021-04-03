@@ -1,0 +1,35 @@
+.catalog-item {
+  padding-top: 30px;
+}
+
+.catalog-item__title {
+  .text(17px; 24px; @color-title; bold);
+  margin: 0;
+}
+
+.catalog-item__img-link img {
+  display: block;
+}
+
+.catalog-item__wrapper {
+  border: 1px solid @color-border2;
+  padding: 26px;
+}
+
+.catalog-item__description {
+  .text(13px; 30px; @color-text; normal);
+}
+
+.catalog-item__buy {
+  .text(15px; 24px; @color-title; bold);
+  padding-top: 41px;
+  position: relative;
+
+  &::before {
+    .pseudo();
+    width: 204px;
+    height: 1px;
+    background-color: @color-border2;
+    top: 20px;
+  }
+}
