@@ -1,6 +1,6 @@
 .product__wrapper {
   .container();
-  padding: 0 30px 0 30px;
+  padding: 0 30px;
   height: 100%;
   background: @color-bg;
 }
@@ -8,6 +8,7 @@
 .product__weekly {
   .text(17px; 20px; @color-main; bold);
   text-transform: uppercase;
+  display: block;
 }
 
 .product__title {
@@ -51,11 +52,120 @@
 }
 
 .product__img-wrapper {
-  background-color: @color-bg2;
+  background: @color-bg2 url("../img/product-mobile.jpg");
   width: 260px;
   height: 315px;
 }
 
 .product__price {
   .text(17px; 24px; @color-text; bold);
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .product__wrapper {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 48% 27%;
+    column-gap: 92px;
+    min-height: 595px;
+  }
+
+  .product__headline {
+    display: flex;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .product__title {
+    .text(45px; 50px; @color-title; bold);
+  }
+
+  .product__weekly {
+    margin-left: auto;
+    width: 100px;
+    text-align: center;
+  }
+
+  .product__info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .product__text {
+    .text(17px; 30px; @color-text; normal);
+    margin-top: 0;
+  }
+
+  .product__description-list {
+    padding: 35px 0;
+  }
+
+  .product__img-wrapper {
+    background: @color-bg2 url("../img/product-tablet.jpg");
+    background-position: right;
+    width: 334px;
+    height: 404px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .product__buy {
+    grid-column: 3/3;
+  }
+
+  .product__price {
+    .text(20px; 24px; @color-text; bold);
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__wrapper {
+    padding: 0 50px;
+    margin-top: 71px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 636px;
+  }
+
+  .product__img-wrapper {
+    background: @color-bg2 url("../img/product-desktop.jpg");
+    background-position: right;
+    width: 525px;
+    height: 636px;
+    position: absolute;
+    right: 50px;
+  }
+
+  .product__weekly {
+    order: 0;
+    margin: 31px 0 0 31px;
+  }
+
+  .product__title {
+    order: 1;
+    .text(53px; 57px; @color-title; bold);
+    margin-left: 40px;
+    z-index: 1;
+  }
+
+  .product__info {
+    max-width: 292px;
+    margin-left: 175px;
+    margin-top: 35px;
+  }
+
+  .product__buy {
+    margin-left: 175px;
+    max-width: 292px;
+    margin-top: auto;
+  }
 }

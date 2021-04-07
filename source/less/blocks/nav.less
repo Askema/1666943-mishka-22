@@ -1,21 +1,130 @@
 .nav__list {
   .ul();
+  display: block;
+}
+
+.nav__item--logo,
+.nav__item--tablet,
+.nav__item--desktop {
+  display: none;
 }
 
 .nav__item {
-  padding: 28px 0  27px 76px;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  box-shadow: 0 1px 0 @color-border2, inset 0 1px 0 @color-border2;
   background: @color-bg;
 
-  &--desktop {
-    display: none;
-  }
-
-  &--tablet {
-    display: none;
+  &--search {
+    @media (min-width: @tablet-width) {
+      width: 82px;
+      padding: 0;
+    }
   }
 }
 
 .nav__link {
   .text(17px, 24px, @color-title, bold);
+  padding: 27px 60px 27px 76px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 20px;
+  }
+
+  &--delivery {
+    .text(15px; 24px; @color-text; normal);
+  }
+
+  &--search {
+    @media (min-width: @tablet-width) {
+      font-size: 0;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+  }
+
+  .nav__item--logo,
+  .nav__item--tablet {
+    display: block;
+  }
+
+  .nav__item {
+    background: transparent;
+    box-shadow: none;
+    height: 85px;
+
+
+    &--logo {
+      width: 40%;
+      flex-grow: 1;
+      order: 1;
+    }
+
+    &--search {
+      order: 2;
+      border-left: 1px solid rgba(@color-title, 0.1);
+      border-right: 1px solid rgba(@color-title, 0.1);
+    }
+
+    &--basket {
+      order: 3;
+    }
+
+    &--catalog {
+      order: 4;
+    }
+
+    &--order {
+      order: 5;
+    }
+
+    &--delivery {
+      order: 6;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav__item {
+    &--desktop {
+      display: block;
+      order: 6;
+    }
+
+    &--logo {
+      width: 40%;
+      flex-grow: 1;
+      order: 3;
+    }
+
+    &--search {
+      order: 4;
+      border-left: 1px solid rgba(@color-title, 0.1);
+      border-right: 1px solid rgba(@color-title, 0.1);
+    }
+
+    &--basket {
+      order: 5;
+    }
+
+    &--catalog {
+      order: 1;
+      border-right: 1px solid rgba(@color-title, 0.1);
+    }
+
+    &--order {
+      order: 2;
+    }
+
+    &--delivery {
+      order: 7;
+      margin-left: auto;
+    }
+  }
 }
