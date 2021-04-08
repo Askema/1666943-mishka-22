@@ -23,6 +23,7 @@
 
 .category__wrapper {
   .container();
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -33,7 +34,6 @@
   .text(19px; 24px; @color-bg; bold);
   display: block;
   background-color: @color-main;
-  padding: 24px 0 31px 30px;
   width: 100%;
 
   &--toy {
@@ -42,7 +42,9 @@
 }
 
 .category__item {
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
+  padding: 24px 0 31px 30px;
   position: relative;
 
   &::after {

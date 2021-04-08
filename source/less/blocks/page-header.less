@@ -1,12 +1,18 @@
+.page-header {
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, @color-bg 50%, rgba(@color-title, 0.1) 50%, @color-bg2 51%);
+  }
+}
+
 .page-header__wrapper {
   .container();
   position: relative;
   background-color: @color-bg;
-  height: 79px;
-  border-bottom: 1px solid rgba(@color-title, 0.1);
+  min-height: 79px;
 
   @media (min-width: @tablet-width) {
-    height: 85px;
+    min-height: 85px;
+    background-image: linear-gradient(to bottom, @color-bg 50%, rgba(@color-title, 0.1) 50%, @color-bg2 51%);
   }
 }
 
