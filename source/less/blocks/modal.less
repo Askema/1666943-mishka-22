@@ -41,6 +41,7 @@
   padding: 18px 29px;
   display: block;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .modal__button {
@@ -54,4 +55,25 @@
   margin: 0 auto;
   padding: 18px;
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .modal__wrapper {
+    padding: 46px 98px;
+    width: 566px;
+    height: 336px;
+  }
+
+  .modal__title {
+    .text(30px, 57px, @color-title, bold);
+    margin-bottom: 0;
+  }
+
+  .modal__choose-size {
+    .text(17px; 30px; @color-text; normal);
+  }
+
+  .modal__input-label {
+    width: 112px;
+  }
 }

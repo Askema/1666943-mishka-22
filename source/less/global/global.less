@@ -4,6 +4,7 @@
 
 body {
   color: @color-text;
+  width: 100%;
 }
 
 img {
@@ -33,4 +34,8 @@ a {
   text-align: center;
   text-transform: uppercase;
   border: 2px solid @color-text;
+
+  @media (min-width: @tablet-width) {
+    .text(17px; 20px; @color-text; bold);
+  }
 }
