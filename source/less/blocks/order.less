@@ -6,9 +6,29 @@
   .container();
   background-color: @color-bg;
   padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
-.order__subtitle {
+.order__subtitle p {
   .text(13px; 24px; @color-text);
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    .container();
+    .text(17px; 30px; @color-text; normal);
+  }
+}
+
+.order__title-wrapper {
+  background-color: @color-main2;
+  padding: 70px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 100px 0 75px 0;
+    background-color: @color-bg2;
+  }
 }
