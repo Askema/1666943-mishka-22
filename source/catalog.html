@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет магазин "Mishka"</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -19,13 +20,18 @@
       <nav class="nav">
         <div class="nav__wrapper">
           <ul class="nav__list">
-            <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
-            <li class="nav__item"><a href="form.html" class="nav__link">Вязание на заказ</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Поиск по сайту</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Корзина: пока пуста</a></li>
+            <li class="nav__item nav__item--tablet nav__item--logo">
+              <a href="index.html" class="nav__link visually-hidden">Мишка</a>
+            </li>
+            <li class="nav__item nav__item--catalog"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
+            <li class="nav__item nav__item--order"><a href="form.html" class="nav__link">Вязание на заказ</a></li>
+            <li class="nav__item nav__item--search"><a href="" class="nav__link nav__link--search">Поиск по сайту</a>
+            </li>
+            <li class="nav__item nav__item--basket"><a href="" class="nav__link">Корзина: пока пуста</a></li>
             <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Новые поступления</a></li>
             <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Распродажа</a></li>
-            <li class="nav__item nav__item--tablet"><a href="" class="nav__link">Бесплатная доставка по России</a></li>
+            <li class="nav__item nav__item--tablet nav__item--delivery"><a href=""
+                class="nav__link nav__link--delivery">Бесплатная доставка по России</a></li>
           </ul>
         </div>
       </nav>
