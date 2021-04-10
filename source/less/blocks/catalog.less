@@ -1,4 +1,23 @@
 .catalog__wrapper {
   .container();
   padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.catalog__title-wrapper {
+  background: @color-main2;
+  padding: 70px 0;
+
+  @media (min-width: @tablet-width) {
+    background: @color-bg2;
+  }
 }
