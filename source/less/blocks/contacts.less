@@ -32,18 +32,32 @@
 .contacts__description-definition-link {
   color: @color-text;
   position: relative;
+  padding-bottom: 5px;
 
   &::after {
     .pseudo();
     width: 167px;
     height: 1px;
-    background-color: @color-main;
-    bottom: -5px;
+    background-color: @color-border;
+    bottom: 0;
+  }
+
+  &:hover {
+    color: @color-btn-hover;
   }
 }
 
+.contacts__description-definition-link:hover::after,
+.contacts__description-definition-link:focus::after {
+  background-color: @color-btn-hover;
+}
+
+.contacts__description-definition-link:active::after {
+  background-color: rgba(@color-btn-hover, 0.1);
+}
+
 .contacts__map {
-  background: @color-bg2 url("../img/map.jpg");
+  background: @color-bg2 url("../img/map.jpg") no-repeat;
   min-height: 454.16px;
 }
 
@@ -52,8 +66,16 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    margin: 0;
+    padding: 0 50px;
+    background-color: @color-bg;
+    margin-top: 31px;
+    width: 100%;
+  }
+
   .contacts__map {
-    background: @color-bg2 url("../img/map-tablet.jpg");
+    background: @color-bg2 url("../img/map-tablet.jpg") no-repeat;
     min-height: 457px;
   }
 
@@ -73,7 +95,6 @@
 
   .contacts__description-term {
     margin-right: 0;
-    min-width: 60px;
   }
 
   .contacts__description-definition-link {
@@ -98,22 +119,26 @@
 
 @media (min-width: @desktop-width) {
   .contacts__wrapper {
+    .container();
     padding: 0 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr min-content;
+    column-gap: 50px;
   }
 
   .contacts__description-list {
+    .ul();
     display: grid;
-    grid-template-columns: 37.308% 62.308%;
+    grid-template-columns: max-content 1fr;
     gap: 0;
+    column-gap: 24px;
   }
 
   .contacts__title {
     .text(53px, 57px, @color-title, bold);
     margin-top: 79px;
-    padding-left: 111px;
+    padding-left: 175px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -127,11 +152,11 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: -1;
   }
 
   .contacts__info {
-    padding-left: 111px;
+    padding-left: 175px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -139,7 +164,7 @@
   }
 
   .contacts__button-wrapper {
-    padding-left: 111px;
+    padding-left: 115px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -147,6 +172,7 @@
   }
 
   .contacts__button {
-    margin: 0 auto auto auto;
+    width: 230px;
+    margin: auto;
   }
 }

@@ -3,7 +3,6 @@
   display: block;
 }
 
-.nav__item--logo,
 .nav__item--tablet,
 .nav__item--desktop {
   display: none;
@@ -26,12 +25,28 @@
   padding: 27px 60px 27px 76px;
   display: block;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 27px 20px;
+    .text(15px, 24px, @color-title, bold);
+    padding: 32.5px 35px;
+    padding-left: 0;
   }
 
   &--delivery {
     .text(15px; 24px; @color-text; normal);
+    padding-right: 0;
+  }
+
+  &--basket {
+    padding-right: 0;
   }
 
   &--search {
@@ -42,7 +57,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .nav-wrapper {
+    min-width: 668px;
+  }
+
   .nav__list {
+    min-width: 668px;
     display: flex;
     flex-wrap: wrap;
     background: transparent;
@@ -56,23 +76,27 @@
   .nav__item {
     background: transparent;
     box-shadow: none;
-    height: 85px;
+    height: 89px;
     order: 10;
 
 
     &--logo {
-      width: 40%;
-      flex-grow: 1;
+      min-width: 320px;
+      width: 48%;
       order: 1;
+      margin-right: auto;
     }
 
     &--search {
+      width: 82px;
       order: 2;
       border-left: 1px solid rgba(@color-title, 0.1);
       border-right: 1px solid rgba(@color-title, 0.1);
     }
 
     &--basket {
+      text-align: right;
+      min-width: 264px;
       order: 3;
     }
 
@@ -91,6 +115,12 @@
   }
 }
 
+.nav__item--logo {
+  @media (min-width: @between-width) {
+    width: 54%;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .nav__item {
     &--desktop {
@@ -99,8 +129,7 @@
     }
 
     &--logo {
-      width: 30%;
-      flex-grow: 1;
+      width: 33%;
       order: 3;
     }
 
@@ -111,6 +140,7 @@
     }
 
     &--basket {
+      width: auto;
       order: 5;
     }
 
@@ -127,5 +157,9 @@
       order: 7;
       margin-left: auto;
     }
+  }
+
+  .nav__link--order {
+    padding-left: 35px;
   }
 }
