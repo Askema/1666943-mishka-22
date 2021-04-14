@@ -1,6 +1,14 @@
 .nav__list {
   .ul();
   display: block;
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, @color-bg 89px, rgba(@color-title, 0.1) 90px, @color-bg2 45.5px);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to bottom, @color-bg 89px, rgba(@color-title, 0.1) 90px, @color-bg2 45.5px);
+  }
 }
 
 .nav__item--tablet,
@@ -119,6 +127,10 @@
 
   .nav__link--basket {
     .text(17px; 24px; @color-title; bold);
+  }
+
+  .nav__link--delivery {
+    text-align: left;
   }
 }
 
