@@ -141,6 +141,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nav__list {
+    max-width: 1050px;
+  }
+
   .nav__item {
     &--desktop {
       display: block;
@@ -178,7 +182,8 @@
 
     &--delivery {
       order: 7;
-      margin-left: auto;
+      min-width: 230px;
+      text-align: right;
     }
   }
 
