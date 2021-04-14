@@ -8,12 +8,11 @@
     background-repeat: repeat-x;
     height: 6px;
     width: 100%;
-    bottom: -49px;
+    bottom: -42px;
     background-position-y: 50%;
-    background-size: contain;
 
     @media (min-width: @tablet-width) {
-      left: -10px;
+      left: 0;
       height: 23px;
       width: 100%;
       bottom: -23px;
@@ -21,11 +20,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: -10px;
-      height: 33px;
-      width: 100%;
-      bottom: -23px;
-      background-size: contain;
+      width: 0;
     }
   }
 }
@@ -35,6 +30,21 @@
   padding: 0 30px;
   height: 100%;
   background: @color-bg;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      .pseudo();
+      background: url("../img/zigzag-section.svg");
+      background-repeat: repeat-x;
+      background-position-y: 50%;
+      background-size: contain;
+      left: 50px;
+      height: 33px;
+      width: 1050px;
+      bottom: -100px;
+    }
+  }
 }
 
 .product__weekly {
@@ -59,6 +69,7 @@
 
 .product__description-list {
   margin-top: 28px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: min-content 1fr;
 }
@@ -67,7 +78,7 @@
 .product__description-definition {
   min-height: 27px;
   .text(15px; 20px; @color-text);
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   position: relative;
 
   &::after {
