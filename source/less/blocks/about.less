@@ -48,6 +48,8 @@
   .about__item {
     width: 50%;
     padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 24px;
 
     &:first-of-type {
       order: -4;
@@ -69,7 +71,7 @@
 
 @media (min-width: @desktop-width) {
   .about {
-    padding-bottom: 7px;
+    margin-bottom: 55px;
   }
 
   .about__wrapper {
@@ -79,6 +81,17 @@
   }
 
   .about__title {
+    padding-left: 5px;
     .text(53px; 57px; @color-title; bold);
+  }
+
+  .about__list {
+    justify-content: flex-start;
+  }
+
+  .about__item {
+    margin: 0 0 29px 0;
+    padding: 83px 0 0 5px;
+    width: 350px;
   }
 }
