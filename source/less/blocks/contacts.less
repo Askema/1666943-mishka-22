@@ -1,18 +1,23 @@
 .contacts__wrapper {
-  .container();
-  padding: 0 30px 0 30px;
   background-color: @color-bg;
   margin-top: 31px;
 }
 
 .contacts__title {
-  .text(25px, 30px, @color-title, bold);
+  .text(18px, 30px, @color-title, bold);
   margin-top: 31px;
+  margin-bottom: 29px;
+  padding: 0 30px;
 }
 
 .contacts__description-list {
+  padding: 0 30px;
+  margin-bottom: 50px;
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content;
+  column-gap: 28px;
+  row-gap: 18px;
 }
 
 .contacts__description-term,
@@ -32,32 +37,58 @@
 .contacts__description-definition-link {
   color: @color-text;
   position: relative;
+  padding-bottom: 5px;
 
   &::after {
     .pseudo();
     width: 167px;
     height: 1px;
-    background-color: @color-main;
-    bottom: -5px;
+    background-color: @color-border;
+    bottom: 2px;
+  }
+
+  &:hover {
+    color: @color-btn-hover;
   }
 }
 
+.contacts__description-definition-link:hover::after,
+.contacts__description-definition-link:focus::after {
+  background-color: @color-btn-hover;
+}
+
+.contacts__description-definition-link:active::after {
+  background-color: rgba(@color-btn-hover, 0.1);
+}
+
 .contacts__map {
-  background: @color-bg2 url("../img/map.jpg");
+  background: @color-bg2 url("../img/map.jpg") no-repeat center;
   min-height: 454.16px;
 }
 
 .contacts__button-wrapper {
-  margin: 40px 0;
+  padding: 0 30px;
+  margin-top: 43px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    margin-top: 150px;
+  }
+
+  .contacts__wrapper {
+    background-color: @color-bg;
+    width: 100%;
+  }
+
   .contacts__map {
-    background: @color-bg2 url("../img/map-tablet.jpg");
+    background: @color-bg2 url("../img/map-tablet.jpg") no-repeat;
     min-height: 457px;
   }
 
   .contacts__title {
+    padding: 0 50px;
     .text(43px, 50px, @color-title, bold);
   }
 
@@ -67,13 +98,20 @@
   }
 
   .contacts__description-list {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    padding: 0 50px;
     display: flex;
-    gap: 50px;
+    gap: 24.5px;
   }
 
   .contacts__description-term {
     margin-right: 0;
-    min-width: 60px;
+    min-width: 54px;
+  }
+
+  .contacts__description-definition {
+    min-width: 230px;
   }
 
   .contacts__description-definition-link {
@@ -82,38 +120,51 @@
       width: 204px;
       height: 1px;
       background-color: @color-main;
-      bottom: -5px;
+      bottom: 1px;
     }
   }
 
   .contacts__button-wrapper {
+    padding: 0 50px;
     display: flex;
+    margin: 55px 0;
   }
 
   .contacts__button {
+    min-width: 230px;
     margin: 0 auto;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    margin-top: 0;
+    padding-top: 73px;
+  }
+
   .contacts__wrapper {
-    padding: 0 50px;
+    .container();
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content max-content;
+    column-gap: 25px;
+    row-gap: 18px;
   }
 
   .contacts__description-list {
+    .ul();
     display: grid;
-    grid-template-columns: 37.308% 62.308%;
-    gap: 0;
+    grid-template-columns: max-content 1fr;
+    row-gap: 17px;
+    column-gap: 24px;
   }
 
   .contacts__title {
     .text(53px, 57px, @color-title, bold);
     margin-top: 79px;
-    padding-left: 111px;
+    margin-bottom: 17px;
+    padding-left: 175px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -127,11 +178,11 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: -1;
   }
 
   .contacts__info {
-    padding-left: 111px;
+    padding-left: 175px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -139,7 +190,7 @@
   }
 
   .contacts__button-wrapper {
-    padding-left: 111px;
+    padding-left: 128px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -147,6 +198,7 @@
   }
 
   .contacts__button {
-    margin: 0 auto auto auto;
+    width: 230px;
+    margin: auto;
   }
 }

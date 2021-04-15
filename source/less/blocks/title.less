@@ -2,9 +2,14 @@
   .text(27px; 30px; @color-title; bold);
   text-align: center;
   display: block;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     .text(43px; 50px; @color-title; bold);
+
+    & br:first-of-type {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {

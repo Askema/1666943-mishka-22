@@ -1,6 +1,11 @@
 .social {
   position: relative;
-  padding: 35px 0 35px 0;
+  padding: 29px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
 
   &::after {
     .pseudo();
@@ -12,6 +17,7 @@
 }
 
 .social__list {
+  min-height: 22px;
   .ul();
 }
 
