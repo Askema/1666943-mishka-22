@@ -12,6 +12,22 @@
   margin-bottom: 4px;
 }
 
+.order-form__input-wrapper {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  & .order-form__text {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+
 .order-form__fieldset--full-name {
   margin-bottom: 12px;
 }
@@ -42,25 +58,23 @@
   text-transform: uppercase;
   margin-bottom: 30px;
   padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 
-  &:not(.order-form__legend--email)::after {
-    .pseudo();
-    width: 65%;
-    padding-right: 30px;
+  &::after {
+    content: "";
+    display: block;
     height: 1px;
+    width: 100%;
+    margin-left: 20px;
     background-color: @color-main;
-    left: 60px;
-    top: 8px;
   }
-}
 
-.order-form__legend--email::after {
-  .pseudo();
-  width: 68%;
-  height: 1px;
-  background-color: @color-main;
-  left: 80px;
-  top: 8px;
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .order-form__radio,
@@ -141,8 +155,8 @@
 @media (min-width: @tablet-width) {
   .order-form__fieldset {
     position: relative;
-    .container();
     padding: 50px 50px 50px 297px;
+    margin-bottom: 0;
   }
 
   .order-form__fieldset-wrapper {
@@ -173,11 +187,12 @@
 
     & .order-form__label {
       padding-right: 25px;
+      white-space: nowrap;
     }
 
     & .order-form__text {
       flex-grow: 1;
-      width: 70%;
+      width: 100%;
       margin-bottom: 24px;
     }
 
@@ -189,10 +204,11 @@
   .order-form__fieldset--color {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 60px 0 12px 237px;
+    justify-content: space-between;
+    padding: 60px 56px 12px 237px;
 
     & label {
-      min-width: 250px;
+      min-width: 200px;
       margin-bottom: 16px;
       margin-right: 12px;
       padding-top: 5px;
@@ -201,6 +217,12 @@
     & .order-form__legend {
       top: 67px;
     }
+  }
+
+  .order-form__input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
   }
 
   .order-form__fieldset--tel, {
@@ -216,7 +238,7 @@
   }
 
   .order-form__fieldset--textarea {
-    padding: 50px 50px 48px 217px;
+    padding: 50px 50px 46px 217px;
 
     & .order-form__legend {
       top: 70px;
@@ -294,6 +316,8 @@
   }
 
   .order-form__fieldset--color {
+    justify-content: stretch;
+    padding-top: 50px;
     padding-bottom: 30px;
 
     & label {
@@ -333,6 +357,8 @@
   }
 
   .order-form__submit {
+    width: 100%;
+    margin: 0;
     padding: 0 225px 0 226px;
   }
 
