@@ -9,27 +9,22 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <div class="page-header__wrapper">
-      <div class="page-header__logo">
-        <a href="index.html" class="page-header__link">
-          <img src="" alt="Логотип «Мишки»">
-        </a>
-      </div>
+  <header class="page-header page-header--inner-page">
+    <div class="page-header__wrapper page-header__wrapper--inner-page">
       <div class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></div>
       <nav class="nav">
         <div class="nav__wrapper">
-          <ul class="nav__list">
-            <li class="nav__item nav__item--tablet nav__item--logo">
+          <ul class="nav__list nav__list--inner-page">
+            <li class="nav__item nav__item--logo">
               <a href="index.html" class="nav__link visually-hidden">Мишка</a>
             </li>
             <li class="nav__item nav__item--catalog"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
-            <li class="nav__item nav__item--order"><a href="form.html" class="nav__link">Вязание на заказ</a></li>
+            <li class="nav__item nav__item--order"><a href="form.html" class="nav__link nav__link--order">Вязание на заказ</a></li>
             <li class="nav__item nav__item--search"><a href="" class="nav__link nav__link--search">Поиск по сайту</a>
             </li>
-            <li class="nav__item nav__item--basket"><a href="" class="nav__link">Корзина: пока пуста</a></li>
-            <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Новые поступления</a></li>
-            <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Распродажа</a></li>
+            <li class="nav__item nav__item--basket"><a href="" class="nav__link nav__link--basket">Корзина: пока пуста</a></li>
+            <li class="nav__item nav__item--desktop"><a href="" class="nav__link nav__link--desktop">Новые поступления</a></li>
+            <li class="nav__item nav__item--desktop"><a href="" class="nav__link nav__link--desktop nav__link--sale">Распродажа</a></li>
             <li class="nav__item nav__item--tablet nav__item--delivery"><a href=""
                 class="nav__link nav__link--delivery">Бесплатная доставка по России</a></li>
           </ul>
@@ -49,7 +44,7 @@
         </div>
         <form action="https://echo.htmlacademy.ru/" class="order-form">
           <div class="order-form__fieldset-wrapper">
-            <fieldset class="order-form__fieldset">
+            <fieldset class="order-form__fieldset order-form__fieldset--category">
               <legend class="order-form__legend">Тип</legend>
               <input class="order-form__radio" type="radio" id="accessory" name="type" value="accessory" checked>
               <label class="order-form__label order-form__label--radio" for="toy">Аксессуар для интерьера</label>
@@ -89,17 +84,17 @@
             </fieldset>
           </div>
           <div class="order-form__fieldset-wrapper order-form__fieldset-wrapper--gray">
-            <fieldset class="order-form__fieldset">
+            <fieldset class="order-form__fieldset order-form__fieldset--tel">
               <legend class="order-form__legend">Тел</legend>
               <input class="order-form__text" type="tel" id="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
             </fieldset>
-            <fieldset class="order-form__fieldset">
+            <fieldset class="order-form__fieldset order-form__fieldset--mail">
               <legend class="order-form__legend order-form__legend--email">e-mail</legend>
               <input class="order-form__text" type="email" id="email" name="email" placeholder="Ваш Email*" required>
             </fieldset>
           </div>
           <div class="order-form__fieldset-wrapper">
-            <fieldset class="order-form__fieldset">
+            <fieldset class="order-form__fieldset order-form__fieldset--textarea">
               <legend class="order-form__legend">Доп</legend>
               <textarea class="order-form__textarea" name="textarea" rows="7"
                 placeholder="Опишите все ваши пожелания к заказу"></textarea>

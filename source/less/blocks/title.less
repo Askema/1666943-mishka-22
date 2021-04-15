@@ -20,9 +20,25 @@
 .title--inner-page {
   background-color: @color-main2;
   min-width: 270px;
+  position: relative;
+  padding: 74.8px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 100px 1px 75px 0;
-    background-color: @color-bg2;
+    padding: 25px 1px 85px 0;
+    background-color: @color-main2;
+
+    &::after {
+      .pseudo();
+      height: 24px;
+      width: 100%;
+      bottom: -2px;
+      background-image: url("../img/zigzag.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 0 100px 0;
   }
 }
