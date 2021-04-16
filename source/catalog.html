@@ -9,27 +9,26 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <div class="page-header__wrapper">
-      <div class="page-header__logo">
-        <a href="index.html" class="page-header__link">
-          <img src="" alt="Логотип «Мишки»">
-        </a>
-      </div>
+  <header class="page-header page-header--inner-page">
+    <div class="page-header__wrapper page-header__wrapper--inner-page">
       <div class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></div>
       <nav class="nav">
         <div class="nav__wrapper">
-          <ul class="nav__list">
-            <li class="nav__item nav__item--tablet nav__item--logo">
+          <ul class="nav__list nav__list--inner-page">
+            <li class="nav__item nav__item--logo">
               <a href="index.html" class="nav__link visually-hidden">Мишка</a>
             </li>
             <li class="nav__item nav__item--catalog"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
-            <li class="nav__item nav__item--order"><a href="form.html" class="nav__link">Вязание на заказ</a></li>
+            <li class="nav__item nav__item--order"><a href="form.html" class="nav__link nav__link--order">Вязание на
+                заказ</a></li>
             <li class="nav__item nav__item--search"><a href="" class="nav__link nav__link--search">Поиск по сайту</a>
             </li>
-            <li class="nav__item nav__item--basket"><a href="" class="nav__link">Корзина: пока пуста</a></li>
-            <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Новые поступления</a></li>
-            <li class="nav__item nav__item--desktop"><a href="" class="nav__link">Распродажа</a></li>
+            <li class="nav__item nav__item--basket"><a href="" class="nav__link nav__link--basket">Корзина: пока
+                пуста</a></li>
+            <li class="nav__item nav__item--desktop"><a href="" class="nav__link nav__link--desktop">Новые
+                поступления</a></li>
+            <li class="nav__item nav__item--desktop"><a href=""
+                class="nav__link nav__link--desktop nav__link--sale">Распродажа</a></li>
             <li class="nav__item nav__item--tablet nav__item--delivery"><a href=""
                 class="nav__link nav__link--delivery">Бесплатная доставка по России</a></li>
           </ul>
@@ -39,7 +38,6 @@
   </header>
   <main class="page-main">
     <section class="catalog">
-
       <div class="catalog__title-wrapper">
         <h1 class="title title--inner-page">Каталог товаров</h1>
       </div>
@@ -50,7 +48,7 @@
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
-              <a href="#">
+              <a href="#" class="catalog-item__title-link">
                 <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
               </a>
               <span class="catalog-item__description">Рост 30 см, вес 200 г</span>
@@ -67,10 +65,10 @@
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
-              <a href="#">
+              <a href="#" class="catalog-item__title-link">
                 <h2 class="catalog-item__title">Корзинка для белья</h2>
               </a>
-              <span class="catalog-item__description">Димаетр 15 см, высота 10 см</span>
+              <span class="catalog-item__description">Диаметр 15 см, высота 10 см</span>
             </div>
             <div class="catalog-item__buy">
               <span class="catalog-item__price">690 руб.</span>
@@ -85,13 +83,13 @@
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
-              <a href="#">
+              <a href="#" class="catalog-item__title-link">
                 <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
               </a>
               <span class="catalog-item__description">Диаметр 30 см, высота 30 см</span>
             </div>
             <div class="catalog-item__buy">
-              <span class="catalog-item__price">1500 руб.</span>
+              <span class="catalog-item__price">1 500 руб.</span>
               <a class="catalog-item__basket" href="#"><span class="visually-hidden">Добавить в корзину</span></a>
             </div>
           </div>

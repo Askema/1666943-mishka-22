@@ -1,10 +1,20 @@
 .making__wrapper {
-  .container();
   padding: 30px 30px 0 30px;
+  margin-bottom: 58px;
 }
 
 .making__wrapper-second {
   border: 1px solid @color-border2;
+  padding: 8px 0 33px 0;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(@color-title, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(@color-title, 0.1);
+  }
 }
 
 .making__title-wrapper {
@@ -13,7 +23,7 @@
 
 .making__title {
   .text(17px; 24px; @color-title; bold);
-  padding-left: 65px;
+  padding-left: 60px;
   position: relative;
 
   &::before {
@@ -26,10 +36,13 @@
 
 .making__video-wrapper {
   position: relative;
+  padding-top: 12px;
+  background: @color-main2;
 }
 
 .making__video-wrapper img {
   display: block;
+  width: 100%;
 }
 
 .making__play-button {
@@ -46,25 +59,30 @@
 
 .making__info {
   .text(13px; 24px; @color-text; normal);
-  padding: 30px;
+  padding: 23px 30px 0 33px;
 }
 
 .making__button {
   margin-top: 40px;
+  margin-right: 4px;
 }
 
 @media (min-width: @tablet-width) {
   .making__wrapper {
     padding: 30px 50px 0 50px;
+    margin-bottom: 65px;
   }
 
   .making__wrapper-second {
     display: flex;
     flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 45px;
   }
 
   .making__title-wrapper {
-    margin-top: 27px;
+    margin-top: 25px;
+    padding-left: 45px;
   }
 
   .making__title {
@@ -72,6 +90,7 @@
   }
 
   .making__video-wrapper {
+    padding-top: 0;
     flex-grow: 1;
     min-height: 455px;
     order: -1;
@@ -79,14 +98,29 @@
 
   .making__info {
     .text(15px; 30px; @color-text; normal);
+    padding: 7px 38px 0 39px;
+
+    & p {
+      margin: 0;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .making {
+    margin-top: 33px;
+    margin-bottom: 102px;
+  }
+
+  .making__wrapper {
+    .container();
+  }
+
   .making__wrapper-second {
+    padding-bottom: 0;
     display: grid;
     grid-template-columns: 65% 35%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 37% 63%;
   }
 
   .making__video-wrapper {
@@ -97,6 +131,9 @@
   }
 
   .making__title-wrapper {
+    align-self: flex-end;
+    padding: 50px 50px 8px 20px;
+    margin-top: 0;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -104,10 +141,15 @@
   }
 
   .making__info {
-    margin-left: 65px;
+    margin-left: 40px;
+    padding-top: 2px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+
+  .making__button {
+    margin: 51px 20px 0 0;
   }
 }
