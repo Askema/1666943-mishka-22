@@ -95,11 +95,121 @@
 }
 
 .order-form__label--radio {
-  padding: 5px 0 19px 60px;
+  padding: 5px 0 13px 60px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    & br {
+      display: none;
+    }
+  }
+
+  &::before {
+    .pseudo();
+    width: 36px;
+    height: 36px;
+    border: 2px solid @color-text;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 46px;
+      height: 46px;
+      left: -77px;
+      top: -15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 0;
+      top: -14px;
+    }
+  }
+
+  & ~ .order-form__label--radio {
+    padding-top: 13.5px;
+    padding-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
+  }
 }
+
+.order-form__radio {
+  position: relative;
+}
+
+.order-form__radio:checked + .order-form__label--radio::after {
+  .pseudo();
+  width: 12px;
+  height: 12px;
+  background: @color-main;
+  border: 2px solid @color-main;
+  border-radius: 50%;
+  left: 12px;
+  top: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+    left: -62px;
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1px;
+    left: 15px;
+  }
+}
+
 
 .order-form__label--checkbox {
   padding: 5px 0 38px 61px;
+  position: relative;
+
+  &::before {
+    .pseudo();
+    width: 34px;
+    height: 34px;
+    border: 2px solid @color-text;
+    left: 0;
+    top: -6px;
+
+    @media (min-width: @tablet-width) {
+      width: 48px;
+      height: 48px;
+      left: -20px;
+      top: -10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -1px;
+      top: -1px;
+    }
+  }
+}
+
+.order-form__checkbox:checked + .order-form__label--checkbox::after {
+  .pseudo();
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  background: url("../img/Tick.svg") no-repeat 7px 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+    left: -17px;
+    top: -5px;
+    background-size: 33px 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 1px;
+    top: 4px;
+  }
 }
 
 .order-form__text {
@@ -205,13 +315,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 60px 56px 12px 237px;
+    padding: 60px 56px 15px 237px;
 
     & label {
       min-width: 200px;
-      margin-bottom: 16px;
+      margin-bottom: 13px;
       margin-right: 12px;
-      padding-top: 5px;
+      padding-top: 7px;
     }
 
     & .order-form__legend {
@@ -312,6 +422,7 @@
 
   .order-form__fieldset--category {
     & .order-form__label {
+      padding-top: 2px;
       padding-left: 78px;
     }
   }
@@ -321,8 +432,8 @@
     padding-top: 50px;
     padding-bottom: 30px;
 
-    & label {
-      padding: 19px 0 22px 80px;
+    & .order-form__label {
+      padding: 19px 0 25px 80px;
       min-width: 250px;
     }
   }
