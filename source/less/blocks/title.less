@@ -34,7 +34,11 @@
       bottom: -2px;
       background-image: url("../img/zigzag.svg");
       background-repeat: repeat-x;
-      background-size: contain;
+      background-size: cover;
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/zigzag-desktop.svg");
+      }
     }
   }
 
