@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Интернет магазин "Mishka"</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="img/favicons/manifest.webmanifest">
+  <title>Интернет магазин "Mishka"</title>
 </head>
 
 <body class="page-body">
@@ -16,7 +20,13 @@
         <div class="nav__wrapper">
           <ul class="nav__list nav__list--inner-page">
             <li class="nav__item nav__item--logo">
-              <a href="index.html" class="nav__link visually-hidden">Мишка</a>
+              <a href="index.html" class="nav__link nav__link--logo">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+                  <img class="nav__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+                </picture>
+              </a>
             </li>
             <li class="nav__item nav__item--catalog"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
             <li class="nav__item nav__item--order"><a href="form.html" class="nav__link nav__link--order">Вязание на
@@ -44,7 +54,13 @@
       <div class="catalog__wrapper">
         <article class="catalog-item">
           <a href="#" class="catalog-item__img-link">
-            <img src="img/product-1-mobile.jpg" width="260" height="195" alt="Милый зайчик">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="img/product-1-desktop.jpg 1x, img/product-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/product-1-tablet.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+              <img src="img/product-1-mobile.jpg" width="260" height="195" srcset="img/product-1-mobile@2x.jpg 2x"
+                alt="Милый зайчик">
+            </picture>
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
@@ -61,7 +77,13 @@
         </article>
         <article class="catalog-item">
           <a href="#" class="catalog-item__img-link">
-            <img src="img/product-2-mobile.jpg" width="260" height="195" alt="Вязаная корзина для вашего белья">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="img/product-2-desktop.jpg 1x, img/product-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/product-2-tablet.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+              <img src="img/product-2-mobile.jpg" width="260" height="195" srcset="img/product-2-mobile@2x.jpg 2x"
+                alt="Вязаная корзина для вашего белья">
+            </picture>
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
@@ -78,8 +100,13 @@
         </article>
         <article class="catalog-item">
           <a href="#" class="catalog-item__img-link">
-            <img src="img/product-3-mobile.jpg" width="260" height="195"
-              alt="Большая вязаная корзина для ваших игрушек">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="img/product-3-desktop.jpg 1x, img/product-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/product-3-tablet.jpg 1x, img/product-3-tablet@2x.jpg 2x">
+              <img src="img/product-3-mobile.jpg" width="260" height="195" srcset="img/product-3-mobile@2x.jpg 2x"
+                alt="Большая вязаная корзина для ваших игрушек">
+            </picture>
           </a>
           <div class="catalog-item__wrapper">
             <div class="catalog-item__item-info">
@@ -103,7 +130,12 @@
             <h2 class="making__title">Процесс производства</h2>
           </div>
           <div class="making__video-wrapper">
-            <img src="img/video-mobile.jpg" width="260" height="150" alt="Процесс создания наших товаров">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile.jpg" width="260" height="150" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс создания наших товаров">
+            </picture>
             <button type="button" class="making__play-button"></button>
           </div>
           <div class="making__info">
