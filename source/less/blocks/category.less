@@ -11,7 +11,7 @@
       bottom: -2px;
       background-image: url("../img/zigzag.svg");
       background-repeat: repeat-x;
-      background-size: contain;
+      background-size: cover;
     }
   }
 
@@ -34,12 +34,24 @@
   background: @color-bg2 url("../img/background.jpg") no-repeat;
   background-position: 50% 17%;
 
+  @media (min-resolution: 2dppx) {
+    background: @color-bg2 url("../img/background@2x.jpg") no-repeat;
+    background-position: 50% 17%;
+    background-size: 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 550px;
     padding: 77px 30px 0 30px;
     background: @color-bg2 url("../img/background-desktop.jpg") no-repeat;
     background-position: 50% 40%;
     display: block;
+
+    @media (min-resolution: 2dppx) {
+      background: @color-bg2 url("../img/background-desktop@2x.jpg") no-repeat;
+      background-position: 50% 40%;
+      background-size: 1150px auto;
+    }
   }
 }
 
@@ -83,6 +95,14 @@
 .category__link:focus {
   background-color: @color-btn-hover2;
   transform: translateY(-5px);
+
+  & .category__icon {
+    opacity: 0.9;
+  }
+}
+
+.category__link:active .category__icon {
+  opacity: 0.4;
 }
 
 .category__link--toy:hover,
@@ -91,19 +111,28 @@
 }
 
 .category__item {
-  width: 320px;
   padding: 25px 0 30px 30px;
   position: relative;
 
-  &::after {
-    .pseudo();
-    width: 60px;
-    height: 60px;
-    right: 15px;
-    top: 0;
-  }
-
   @media (min-width: @tablet-width) {
     padding-left: 35px;
+  }
+}
+
+.category__icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  &--interior {
+    width: 40px;
+    height: 62px;
+    right: 35px;
+    top: 23px;
+  }
+
+  &--toy {
+    right: 25px;
+    top: 22px;
   }
 }

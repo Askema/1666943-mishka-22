@@ -63,7 +63,13 @@
 
 .contacts__map {
   background: @color-bg2 url("../img/map.jpg") no-repeat center;
+  overflow-x: hidden;
   min-height: 454.16px;
+
+  @media (min-resolution: 2dppx) {
+    background: @color-bg2 url("../img/map@2x.jpg") no-repeat center;
+    background-size: 768px auto;
+  }
 }
 
 .contacts__button-wrapper {
@@ -83,7 +89,6 @@
   }
 
   .contacts__map {
-    background: @color-bg2 url("../img/map-tablet.jpg") no-repeat center;
     min-height: 457px;
   }
 
