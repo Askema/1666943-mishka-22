@@ -104,11 +104,16 @@
 }
 
 .product__img-wrapper {
-  background: @color-bg2 url("../img/product-mobile.jpg") no-repeat;
-  background-size: 100%;
-  width: 260px;
+  background: @color-bg2;
+  display: inline;
   min-height: 315px;
   margin-bottom: 27px;
+
+  & img {
+    width: 100%;
+    min-height: 315px;
+    display: block;
+  }
 }
 
 .product__price {
@@ -174,8 +179,6 @@
 
   .product__img-wrapper {
     margin: 0;
-    background: @color-bg2 url("../img/product-tablet.jpg");
-    background-position: right;
     width: 334px;
     height: 404px;
     grid-column-start: 2;
@@ -218,8 +221,6 @@
   }
 
   .product__img-wrapper {
-    background: @color-bg2 url("../img/product-desktop.jpg");
-    background-position: right;
     width: 525px;
     height: 636px;
     position: absolute;
