@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Интернет магазин "Mishka"</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="img/favicons/manifest.webmanifest">
+  <title>Интернет магазин "Mishka"</title>
 </head>
 
 <body class="page-body">
@@ -16,7 +20,13 @@
         <div class="nav__wrapper">
           <ul class="nav__list nav__list--inner-page">
             <li class="nav__item nav__item--logo">
-              <a href="index.html" class="nav__link visually-hidden">Мишка</a>
+              <a href="index.html" class="nav__link nav__link--logo">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+                  <img class="nav__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+                </picture>
+              </a>
             </li>
             <li class="nav__item nav__item--catalog"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
             <li class="nav__item nav__item--order"><a href="form.html" class="nav__link nav__link--order">Вязание на
@@ -51,7 +61,8 @@
             <fieldset class="order-form__fieldset order-form__fieldset--category">
               <legend class="order-form__legend">Тип</legend>
               <input class="order-form__radio" type="radio" id="accessory" name="type" value="accessory" checked>
-              <label class="order-form__label order-form__label--radio" for="accessory">Аксессуар для<br> интерьера</label>
+              <label class="order-form__label order-form__label--radio" for="accessory">Аксессуар для<br>
+                интерьера</label>
               <input class="order-form__radio" type="radio" id="toy" name="type" value="toy">
               <label class="order-form__label order-form__label--radio" for="toy">Детская игрушка</label>
             </fieldset>
