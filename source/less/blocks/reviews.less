@@ -42,7 +42,7 @@
       left: 50px;
       height: 33px;
       width: 1050px;
-      bottom: -85px;
+      bottom: -95px;
     }
   }
 }
@@ -61,7 +61,7 @@
 
 .reviews__author-info {
   .text(17px; 24px;);
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .reviews__author-name {
@@ -85,9 +85,24 @@
 .reviews__silder-button {
   border: 0;
   flex-grow: 1;
-  padding: 26px;
+  padding: 12.5px 0;
   background: @color-bg;
   position: relative;
+  display: flex;
+
+  & svg {
+    margin: 0 auto;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
 }
 
 .reviews__silder-button--previous::after {
@@ -107,7 +122,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 81px 50px 47px 50px;
+    padding: 85px 50px 47px 50px;
     margin-top: 57px;
     width: 100%;
 
@@ -150,8 +165,23 @@
 
   .reviews__silder-buttons {
     order: 5;
+    margin-top: auto;
     margin-left: auto;
+    margin-bottom: 13px;
     border: none;
+  }
+
+  .reviews__silder-button {
+    padding-bottom: 0;
+
+    & svg {
+      margin: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .reviews__silder-button--previous {
+    margin-right: 15px;
   }
 
   .reviews__silder-button--previous::after {
@@ -167,31 +197,21 @@
   .reviews__button {
     padding: 13px 26px;
     min-width: 175px;
+    margin-top: -7px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding-bottom: 80.5px;
-    margin-bottom: 0;
+    margin-bottom: 89px;
     position: relative;
-
-    &::after {
-      .pseudo();
-      background: url("../img/zigzag-section.svg");
-      background-repeat: repeat-x;
-      background-size: contain;
-      height: 23px;
-      width: 100%;
-      bottom: 0;
-    }
   }
 
   .reviews__slider {
     .container();
     min-height: 457px;
     background-position: +50px;
-    padding: 80px 50px;
+    padding: 63px 50px;
   }
 
   .reviews__author-name {
@@ -204,16 +224,22 @@
   }
 
   .reviews__author-info {
-    margin-top: -14px;
+    margin-top: -37px;
     padding-left: 175px;
   }
 
   .reviews__quote {
     padding-left: 175px;
     padding-right: 50px;
+    margin-top: 5px;
 
     & br:nth-of-type(1) {
       display: block;
     }
+  }
+
+  .reviews__silder-buttons {
+    margin-top: 0;
+    align-self: flex-start;
   }
 }
