@@ -1,16 +1,20 @@
 .logo-block {
-  @media (min-width: @tablet-width) {
-    padding-top: 51px;
-    padding-bottom: 58px;
-  }
+  padding-top: 2px;
 }
 
 .logo-block--tablet {
   display: none;
-}
 
-@media (min-width: @tablet-width) {
-  .logo-block--tablet {
+  @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+.logo-block__logo:hover,
+.logo-block__logo:focus {
+  fill: @color-btn-hover;
+}
+
+.logo-block__logo:active {
+  opacity: 0.3;
 }

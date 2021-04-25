@@ -53,10 +53,22 @@
   position: absolute;
   width: 79px;
   height: 79px;
-  top: 5px;
-  right: 5px;
-  background: url("../img/menu.svg") no-repeat 33px 37px;
-  background-size: 20px 14px;
+
+
+  &--open {
+    background: url("../img/menu-close.svg") no-repeat 33px 37px;
+    background-size: 21px 20px;
+    top: 1px;
+    right: 5px;
+  }
+
+  &--closed {
+    background: url("../img/menu.svg") no-repeat 33px 37px;
+    background-size: 20px 14px;
+    top: 5px;
+    right: 5px;
+  }
+
 
   @media (min-width: @tablet-width) {
     display: none;

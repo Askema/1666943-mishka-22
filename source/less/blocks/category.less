@@ -11,7 +11,7 @@
       bottom: -2px;
       background-image: url("../img/zigzag.svg");
       background-repeat: repeat-x;
-      background-size: cover;
+      background-size: contain;
     }
   }
 
@@ -30,9 +30,9 @@
 
 .category__title-wrapper {
   .container();
-  padding: 75px 30px 120px 30px;
+  padding: 72px 30px 120px 30px;
   background: @color-bg2 url("../img/background.jpg") no-repeat;
-  background-position: 50% 17%;
+  background-position: 50% 20%;
 
   @media (min-resolution: 2dppx) {
     background: @color-bg2 url("../img/background@2x.jpg") no-repeat;
@@ -129,10 +129,20 @@
     height: 62px;
     right: 35px;
     top: 23px;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      right: 37px;
+    }
   }
 
   &--toy {
     right: 25px;
     top: 22px;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      right: 33px;
+    }
   }
 }
