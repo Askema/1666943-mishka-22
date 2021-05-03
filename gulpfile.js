@@ -33,11 +33,25 @@ const styles = () => {
 
 exports.styles = styles;
 
+const copyStyles = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.copyStyles = copyStyles;
+
 // HTML
 
 const html = () => {
   return gulp.src("source/**/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
 
@@ -47,11 +61,19 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+const scriptsMini = () => {
+  return gulp.src("source/js/script.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
+
+exports.scriptsMini = scriptsMini;
 
 // Images
 
@@ -163,8 +185,10 @@ const build = gulp.series(
   images,
   gulp.parallel(
     styles,
+    copyStyles,
     html,
     scripts,
+    scriptsMini,
     sprite,
     createWebp
   ),
