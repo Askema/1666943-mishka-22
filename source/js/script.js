@@ -21,8 +21,6 @@ for (var i = 0; i < modalButton.length; i++) {
     })
 }
 
-
-
 document.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
         modal.classList.remove('modal--open');

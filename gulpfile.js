@@ -57,19 +57,21 @@ exports.html = html;
 
 // Scripts
 
-const scripts = () => {
+const scriptsMini = () => {
   return gulp.src("source/js/script.js")
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
-const scriptsMini = () => {
+const scripts = () => {
   return gulp.src("source/js/script.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
+
+exports.scripts = scripts;
 
 exports.scriptsMini = scriptsMini;
 
@@ -170,10 +172,6 @@ const watcher = () => {
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 // Build
 
