@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.min.css" rel="stylesheet preload">
+  <link href="css/style.min.css" rel="stylesheet preload" as="style">
   <link rel="icon" href="favicon.ico">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,7 +17,7 @@
 <body class="page-body">
   <header class="page-header page-header--inner-page">
     <div class="page-header__wrapper page-header__wrapper--inner-page">
-      <div class="page-header__toggle page-header__toggle--open"><span class="visually-hidden">Открыть меню</span></div>
+      <div class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></div>
       <nav class="nav">
         <div class="nav__wrapper">
           <ul class="nav__list nav__list--inner-page">
@@ -138,10 +138,16 @@
             <fieldset class="order-form__fieldset order-form__fieldset--tel">
               <legend class="order-form__legend">Тел</legend>
               <input class="order-form__text" type="tel" id="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
+              <svg class="order-form__icon order-form__icon--phone" width="25" height="24">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
             </fieldset>
             <fieldset class="order-form__fieldset order-form__fieldset--mail">
               <legend class="order-form__legend order-form__legend--email">e-mail</legend>
               <input class="order-form__text" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+              <svg class="order-form__icon order-form__icon--mail" width="32" height="21">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
             </fieldset>
           </div>
           <div class="order-form__fieldset-wrapper">
@@ -208,4 +214,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
+</body>
+
 </html>

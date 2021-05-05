@@ -7,7 +7,6 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
-const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const terser = require("gulp-terser");
@@ -43,7 +42,6 @@ const copyStyles = () => {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
 }
 
 exports.copyStyles = copyStyles;

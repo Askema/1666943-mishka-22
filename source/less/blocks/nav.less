@@ -1,6 +1,5 @@
 .nav__list {
   .ul();
-  display: block;
 
   @media (min-width: @tablet-width) {
     background-image: linear-gradient(to bottom, @color-bg 89px, rgba(@color-title, 0.1) 90px, @color-bg2 45.5px);
@@ -19,6 +18,16 @@
       background-image: linear-gradient(to bottom, @color-bg 89px, rgba(@color-title, 0.1) 90px, @color-main2 45.5px);
     }
   }
+}
+
+.nav__list--closed .nav__item:not(.nav__item--logo) {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list--open .nav__item:not(.nav__item--desktop, .nav__item--tablet) {
+  display: block;
 }
 
 .nav__item--tablet,
@@ -59,7 +68,7 @@
 
 .nav__link {
   .text(17px, 24px, @color-title, bold);
-  padding: 28px 60px 27px 76px;
+  padding: 28px 60px 26px 76px;
   display: block;
   position: relative;
 
