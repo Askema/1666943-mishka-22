@@ -3,84 +3,180 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.min.css" rel="stylesheet preload" as="style">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="img/favicons/manifest.webmanifest">
   <title>Интернет магазин "Mishka"</title>
 </head>
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__logo">
-      <a class="page-header__link">
-        <img src="" alt="Логотип «Мишки»">
-      </a>
+    <div class="page-header__wrapper">
+      <div class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></div>
+      <nav class="nav">
+        <div class="nav__wrapper">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--logo">
+              <a href="index.html" class="nav__link nav__link--logo">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+                  <img class="nav__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+                </picture>
+              </a>
+            </li>
+            <li class="nav__item nav__item--catalog">
+              <a href="catalog.html" class="nav__link">
+                <span class="nav__text">Каталог товаров</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--order">
+              <a href="form.html" class="nav__link nav__link--order">
+                <span class="nav__text">Вязание на заказ</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--search">
+              <a href="" class="nav__link nav__link--search">
+                <svg class="nav__icon" width="18" height="18" viewBox="0 0 18 18">
+                  <path
+                    d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" />
+                </svg>
+                <span class="nav__text">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--basket">
+              <a href="" class="nav__link nav__link--basket">
+                <svg class="nav__icon" width="21" height="18" viewBox="0 0 21 18">
+                  <path
+                    d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z" />
+                </svg>
+                <span class="nav__text">Корзина: пока пуста</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--desktop">
+              <a href="" class="nav__link nav__link--desktop">
+                <span class="nav__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--desktop">
+              <a href="" class="nav__link nav__link--desktop nav__link--sale">
+                <span class="nav__text">Распродажа</span>
+              </a>
+            </li>
+            <li class="nav__item nav__item--tablet nav__item--delivery">
+              <a href="" class="nav__link nav__link--delivery">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></div>
-    <nav class="nav">
-      <div class="nav__wrapper">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="" class="nav__link">Каталог товаров</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Вязание на заказ</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Поиск по сайту</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Корзина: пока пуста</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Новые поступления</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Распродажа</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Бесплатная доставка по России</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
   <main class="page-main">
-    <h1 class="title">Милые штуки ручной работы для дома</h1>
     <section class="category">
+      <div class="category__title-wrapper">
+        <h1 class="title">Милые штуки<br> ручной<br> работы для дома</h1>
+      </div>
       <h2 class="visually-hidden">Категории товаров</h2>
       <div class="category__wrapper">
         <a href="" class="category__link">
-          <div class="category__item">Предметы интерьера</div>
+          <div class="category__item">Предметы<br> интерьера
+            <div class="category__icon category__icon--interior">
+              <svg width="40" height="62" viewBox="0 0 40 62" fill="none">
+                <g opacity="0.5">
+                  <path
+                    d="M15.162 37.7167C14.8627 38.7119 14.9625 39.9061 15.162 41.2994C15.6607 43.8869 16.8577 47.2705 17.556 50.9527H22.6433C23.3415 47.3701 24.5385 43.9864 25.137 41.2994C25.4363 39.9061 25.4363 38.6124 25.137 37.7167C24.8378 36.821 24.2393 36.1244 23.142 35.4277H17.157C15.96 36.1244 15.3615 36.821 15.162 37.7167Z"
+                    fill="#149080" />
+                  <path
+                    d="M26.9327 57.6211H13.1671C11.8703 57.6211 10.8728 58.6163 10.8728 59.8105V61.9999H13.1671H26.9327H29.2269V59.8105C29.2269 58.6163 28.2294 57.6211 26.9327 57.6211Z"
+                    fill="#149080" />
+                  <path
+                    d="M34.015 2.18943H22.3441C22.3441 0.995194 21.3466 0 20.0499 0C18.7531 0 17.7556 0.995194 17.7556 2.18943H6.08478L0 27.5668C0.798005 27.0693 1.59602 26.5717 2.59352 26.5717C3.99003 26.5717 4.78803 27.3678 5.48629 27.9649C6.18454 28.562 6.68329 28.7611 6.88279 28.7611C7.18204 28.7611 7.68079 28.4625 8.37905 27.9649C9.0773 27.4673 9.97505 26.5717 11.2718 26.5717C12.5686 26.5717 13.4663 27.3678 14.1646 27.9649C14.8628 28.4625 15.3616 28.7611 15.6608 28.7611C15.7606 28.7611 15.9601 28.6616 16.2593 28.562C16.4588 28.4625 16.7581 28.164 17.1571 27.9649C17.6559 27.5668 18.2544 26.9697 19.1521 26.7707C19.4514 26.6712 19.7506 26.6712 20.0499 26.6712C21.3466 26.6712 22.2444 27.4673 22.9426 28.0644C23.6409 28.562 24.1397 28.8606 24.4389 28.8606C24.7382 28.8606 25.2369 28.562 25.8354 28.0644C26.5337 27.4673 27.4314 26.6712 28.7282 26.6712C30.1247 26.6712 30.9227 27.4673 31.621 28.0644C31.9202 28.363 32.2194 28.562 32.5187 28.6616C32.7182 28.7611 32.9177 28.8606 33.1172 28.8606C33.4165 28.8606 33.9152 28.562 34.5137 27.9649C35.212 27.3678 36.1097 26.5717 37.4065 26.5717C38.404 26.5717 39.202 27.0693 40 27.5668L34.015 2.18943Z"
+                    fill="#149080" />
+                  <path
+                    d="M23.4415 53.1426H16.5587C15.8604 53.1426 15.4614 53.6402 15.4614 54.2373C15.4614 54.8344 15.9602 55.332 16.5587 55.332H23.4415C24.1397 55.332 24.5387 54.8344 24.5387 54.2373C24.6385 53.6402 24.1397 53.1426 23.4415 53.1426Z"
+                    fill="#149080" />
+                  <path
+                    d="M20.0499 28.7598C19.9501 28.7598 19.7506 28.8593 19.4514 28.9588C19.2519 29.0583 19.0524 29.2574 18.8529 29.3569V33.0391H21.1471V29.4564C20.6484 29.0583 20.2494 28.7598 20.0499 28.7598Z"
+                    fill="#149080" />
+                </g>
+              </svg>
+            </div>
+          </div>
         </a>
-        <a href="" class="category__link">
-          <div class="category__item">Детские игрушки</div>
+        <a href="" class="category__link category__link--toy">
+          <div class="category__item">Детские<br> игрушки
+            <div class="category__icon category__icon--toy">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path opacity="0.5"
+                  d="M0 43.9933L27.4 60V36.5436L0 20.4362V43.9933ZM51.3 12.4832V15C51.3 16.8121 47.8 18.3221 43.6 18.3221C39.3 18.3221 35.9 16.8121 35.9 15V10.8725C36.2 12.5839 39.5 13.9933 43.6 13.9933C47.9 13.9933 51.3 12.4832 51.3 10.6711C51.3 8.85907 47.8 7.349 43.6 7.349C43.3 7.349 42.9 7.349 42.6 7.349L37.6 4.42954V7.55034C37.6 9.36242 34.1 10.8725 29.9 10.8725C27.2 10.8725 24.9 10.2685 23.5 9.36242C23.3 9.16108 23.1 8.95973 22.8 8.75839C22.4 8.3557 22.2 7.95302 22.2 7.55034V4.5302L17.4 7.349C17.1 7.349 16.7 7.349 16.3 7.349C12 7.349 8.60001 8.85907 8.60001 10.6711C8.60001 12.4832 12.1 13.9933 16.3 13.9933C20.4 13.9933 23.7 12.5839 24 10.8725V15C24 16.8121 20.5 18.3221 16.3 18.3221C12 18.3221 8.60001 16.8121 8.60001 15V12.5839L2.60001 16.1074L30.1 32.2148L57.5 16.2081L51.3 12.4832ZM37.7 22.7517C37.7 24.5638 34.2 26.0738 30 26.0738C25.7 26.0738 22.3 24.5638 22.3 22.7517V18.6242C22.6 20.3356 25.9 21.745 30 21.745C34.1 21.745 37.4 20.3356 37.7 18.6242V22.7517ZM32.6 36.745V60L60 43.9933V20.7383L32.6 36.745ZM29.9 6.6443C34.2 6.6443 37.6 5.13423 37.6 3.32215C37.6 1.51007 34.1 0 29.9 0C25.6 0 22.2 1.51007 22.2 3.32215C22.2 5.13423 25.6 6.6443 29.9 6.6443Z"
+                  fill="#149080" />
+              </svg>
+            </div>
+          </div>
         </a>
       </div>
     </section>
     <article class="product">
-      <div class="headline">
-        <h2 class="product__title">Вязаные корзинки</h2>
-        <span class="product__weekly">Товар недели</span>
-      </div>
-      <div class="product__info">
-        <p class="product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-          размерах.</p>
-        <dl class="product__description-list">
-          <dt class="product__description-term">Цвет</dt>
-          <dd class="product__description-definition">«Тиффани»/серый</dd>
-          <dt class="product__description-term">Диаметр:</dt>
-          <dd class="product__description-definition">25 см</dd>
-          <dt class="product__description-term">Высота:</dt>
-          <dd class="product__description-definition">15 см</dd>
-        </dl>
-      </div>
-      <div class="product__img-wrapper"><img src="" alt="Фотография вязаных корзинок"></div>
-      <div class="product__buy">
-        <span class="product__price">Цена: 900 руб.</span>
-        <a href="" class="product__button">Заказать</a>
+      <div class="product__wrapper">
+        <div class="product__headline">
+          <h2 class="product__title">Вязаные корзинки</h2>
+          <span class="product__weekly">Товар недели</span>
+        </div>
+        <div class="product__info">
+          <p class="product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
+            размерах.</p>
+          <dl class="product__description-list">
+            <dt class="product__description-term">Цвет</dt>
+            <dd class="product__description-definition">«Тиффани»/серый</dd>
+            <dt class="product__description-term">Диаметр:</dt>
+            <dd class="product__description-definition">25 см</dd>
+            <dt class="product__description-term">Высота:</dt>
+            <dd class="product__description-definition">15 см</dd>
+          </dl>
+        </div>
+        <div class="product__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/product-tablet.webp 1x, img/product-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-mobile.webp 1x, img/product-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/product-desktop.jpg 1x, img/product-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/product-tablet.jpg 1x, img/product-tablet@2x.jpg 2x">
+            <img src="img/product-mobile.jpg" width="260" height="315" srcset="img/product-mobile@2x.jpg 2x"
+              alt="Вязаные корзинки">
+          </picture>
+        </div>
+        <div class="product__buy">
+          <p class="product__price">Цена: 990 руб.</p>
+          <a href="" class="product__button btn modal-btn">Заказать</a>
+        </div>
       </div>
     </article>
     <section class="about">
-      <h2 class="about__title">Коротко о нас:</h2>
-      <ul class="about__list">
-        <li class="about__item">Экологически чистые материалы</li>
-        <li class="about__item">Скандинавский стиль по российской цене</li>
-        <li class="about__item">Увеличивает лайки на фотографиях</li>
-        <li class="about__item">Связано вручную с любовью и умилением</li>
-        <li class="about__item">Поддержка отечественного производителя</li>
-        <li class="about__item">Поставляется в подарочной упаковке</li>
-      </ul>
+      <div class="about__wrapper">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item about__item--flower">Экологически<br> чистые материалы</li>
+          <li class="about__item about__item--money">Скандинавский стиль<br> по российской цене</li>
+          <li class="about__item about__item--heart">Увеличивает лайки<br> на фотографиях</li>
+          <li class="about__item about__item--yarn">Связано вручную<br> с любовью и умилением</li>
+          <li class="about__item about__item--rocket">Поддержка отечественного<br> производителя</li>
+          <li class="about__item about__item--present">Поставляется<br> в подарочной упаковке</li>
+        </ul>
+      </div>
     </section>
     <section class="reviews">
       <div class="reviews__slider">
         <h2 class="reviews__title">Отзывы</h2>
         <blockquote class="reviews__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого
-          количества лайков, как у
-          популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии
+          количества лайков, как<br> у популярных инстамамочек.<br> В отчаянии, я накупила аксессуаров и игрушек в
+          Мишке,<br> и мои фотографии
           сразу стали более стильными, а также набирают больше лайков!</blockquote>
         <div class="reviews__author-info">
           <cite>
@@ -90,61 +186,111 @@
         </div>
         <div class="reviews__silder-buttons">
           <button class="reviews__silder-button reviews__silder-button--previous">
+            <svg width="50" height="26" viewBox="0 0 50 26" fill="none">
+              <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
+            </svg>
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
           <button class="reviews__silder-button reviews__silder-button--next">
+            <svg width="50" height="26" viewBox="0 0 50 26" fill="none">
+              <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
+            </svg>
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
+        <div class="reviews__write"><a href="" class="reviews__button btn">Написать</a></div>
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <div class="contacts__info">
-        <dl class="contacts__description-list">
-          <dt class="contacts__description-term">e-mail: </dt>
-          <dd class="contacts__description-definition"><a href="mailto:info@mimimishkashop.ru"
-              class="contacts__description-definition-link">info@mimimishkashop.ru</a></dd>
-          <dt class="contacts__description-term">адрес: </dt>
-          <dd class="contacts__description-definition">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-          </dd>
-        </dl>
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__info">
+          <dl class="contacts__description-list">
+            <dt class="contacts__description-term">e-mail: </dt>
+            <dd class="contacts__description-definition"><a href="mailto:info@mimimishkashop.ru"
+                class="contacts__description-definition-link">info@mimimishkashop.ru</a></dd>
+            <dt class="contacts__description-term">адрес: </dt>
+            <dd class="contacts__description-definition">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис
+              101
+            </dd>
+          </dl>
+        </div>
+        <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1620220959531!5m2!1sru!2sru"
+            style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contacts__button-wrapper"><a href="write.html" class="contacts__button btn">Напишите нам</a></div>
       </div>
-      <div class="contacts__button-wrapper"><a href="" class="contacts__button">Напишите нам</a></div>
-      <div class="contacts__map"></div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="logo-block">
-      <a href="" class="logo-block__link"></a>
-    </div>
-    <div class="social">
-      <ul class="social__list">
-        <li class="social__item"><a href="" class="social__link"><span class="visually-hidden">instagram</span></a></li>
-        <li class="social__item"><a href="" class="social__link"><span class="visually-hidden">facebook</span></a></li>
-        <li class="social__item"><a href="" class="social__link"><span class="visually-hidden">twitter</span></a></li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <a href="" class="copyright__link">Разработано<span class="visually-hidden"><img src=""
-            alt="Логотип HTML academy">HTML academy</span></a>
+    <div class="page-footer__wrapper">
+      <div class="logo-block logo-block--tablet">
+        <a href="" class="logo-block__link">
+          <svg width="102" height="34" class="logo-block__logo">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="" class="social__link">
+              <span class="visually-hidden">instagram</span>
+              <svg class="social__svg" width="22" height="21">
+                <use xlink:href="img/sprite.svg#instagramm"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link">
+              <span class="visually-hidden">facebook</span>
+              <svg class="social__svg" width="15" height="28">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link">
+              <span class="visually-hidden">twitter</span>
+              <svg class="social__svg" width="23" height="20">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <span>Разработано</span>
+          <svg viewBox="0 0 60 60">
+            <path
+              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+          </svg>
+          <span class="visually-hidden">HTML academy</span>
+        </a>
+      </div>
     </div>
   </footer>
   <section class="modal">
-    <form action="https://echo.htmlacademy.ru/" class="modal__form">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__choose-size">Выберите размер</p>
-      <fieldset class="modal__fieldset-size">
-        <input class="modal__input" type="radio" name="size" id="size-s" value="size-s" checked>
-        <label class="modal__input-label" for="size-s">S</label>
-        <input class="modal__input" type="radio" name="size" id="size-m" value="size-m">
-        <label class="modal__input-label" for="size-m">M</label>
-        <input class="modal__input" type="radio" name="size" id="size-l" value="size-l">
-        <label class="modal__input-label" for="size-l">L</label>
-      </fieldset>
-      <button class="modal-button" type="submit">Добавить</button>
-    </form>
+    <div class="modal__wrapper">
+      <form action="https://echo.htmlacademy.ru/" class="modal__form">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__choose-size">Выберите размер:</p>
+        <fieldset class="modal__fieldset-size">
+          <input class="modal__input" type="radio" name="size" id="size-s" value="size-s" checked>
+          <label class="modal__input-label" for="size-s">S</label>
+          <input class="modal__input" type="radio" name="size" id="size-m" value="size-m">
+          <label class="modal__input-label" for="size-m">M</label>
+          <input class="modal__input" type="radio" name="size" id="size-l" value="size-l">
+          <label class="modal__input-label" for="size-l">L</label>
+        </fieldset>
+        <button class="modal__button" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

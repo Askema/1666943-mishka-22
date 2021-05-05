@@ -1,0 +1,47 @@
+.copyright {
+  padding: 11.5px 0 30px 5px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  .text(19px, 18px, @color-title, bold);
+  display: flex;
+  align-items: center;
+  padding: 20px 34px;
+  position: relative;
+  width: 217px;
+
+  &:hover svg {
+    fill: @color-btn-hover;
+  }
+
+  &:active svg {
+    fill: @color-btn-hover;
+    opacity: 0.3;
+  }
+
+  & span {
+    margin-right: 7px;
+  }
+
+  & svg {
+    width: 40px;
+    height: 45px;
+    fill: @color-main;
+    position: absolute;
+    right: -6px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 47px 5px 0;
+    width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}

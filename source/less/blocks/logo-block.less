@@ -1,0 +1,20 @@
+.logo-block {
+  padding-top: 2px;
+}
+
+.logo-block--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.logo-block__logo:hover,
+.logo-block__logo:focus {
+  fill: @color-btn-hover;
+}
+
+.logo-block__logo:active {
+  opacity: 0.3;
+}

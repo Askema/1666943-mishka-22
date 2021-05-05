@@ -1,0 +1,48 @@
+.title {
+  .text(27px; 30px; @color-title; bold);
+  text-align: center;
+  display: block;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .text(43px; 50px; @color-title; bold);
+
+    & br:first-of-type {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .text(53px; 57px; @color-title; bold);
+  }
+}
+
+.title--inner-page {
+  background-color: @color-main2;
+  min-width: 270px;
+  position: relative;
+  padding: 75px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 1px 85px 0;
+    background-color: @color-main2;
+
+    &::after {
+      .pseudo();
+      height: 24px;
+      width: 100%;
+      bottom: -2px;
+      background-image: url("../img/zigzag.svg");
+      background-repeat: repeat-x;
+      background-size: cover;
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/zigzag-desktop.svg");
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 0 100px 0;
+  }
+}

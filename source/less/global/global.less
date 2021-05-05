@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: @color-text;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  .text(18px; 20px; @color-text; bold);
+  display: block;
+  padding: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid @color-text;
+
+  @media (min-width: @tablet-width) {
+    .text(17px; 20px; @color-text; bold);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-text;
+    color: @color-bg;
+  }
+
+  &:active {
+    color: rgba(@color-bg, 0.3);
+  }
+}
