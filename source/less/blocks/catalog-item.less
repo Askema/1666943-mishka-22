@@ -77,11 +77,20 @@
   }
 }
 
+.catalog-item__basket {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -1.5px;
+
+  @media (min-width: @desktop-width) {
+    right: 33.5px;
+  }
+}
+
 .catalog-item__icon {
   fill: @color-title;
   opacity: 0.2;
-  position: absolute;
-  right: -1.5px;
 
   @media (min-width: @desktop-width) {
     right: 33px;

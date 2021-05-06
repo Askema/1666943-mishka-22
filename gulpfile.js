@@ -200,6 +200,7 @@ exports.default = gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    copyStyles,
     html,
     scripts,
     sprite,
